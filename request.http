@@ -1,0 +1,53 @@
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "exia",
+    "password": "exia"
+}
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "gundam",
+    "password": "gundam"
+}
+
+###
+
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGRlNTliZmU5NDY5NjE3MGI5NDUwNzEiLCJpYXQiOjE2OTIyOTM1ODZ9.iMIazhvQicWG6_IDCIzqBZVUEDlC8b5jZc62v59l7-A
+
+{
+    "title": "Nextjs",
+    "description": "next",
+    "url": "next.com",
+    "status": "TO LEARN"
+}
+
+###
+
+GET http://localhost:8080/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGRiYjFiNmRlNzRhZjdhZmRiYWVmYTUiLCJpYXQiOjE2OTIyOTQ0MDZ9.ATHgrl3sO9uamIpTNOveQI7HGZzJmkVxMSixNy0Ow0U
+
+###
+
+PUT http://localhost:8080/api/posts/64de58f5e94696170b94506d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGRiYjFiNmRlNzRhZjdhZmRiYWVmYTUiLCJpYXQiOjE2OTIyOTQ0MDZ9.ATHgrl3sO9uamIpTNOveQI7HGZzJmkVxMSixNy0Ow0U
+
+{
+    "title": "Vue",
+    "description": "Vueee",
+    "url": "https://vuejs.org",
+    "status": "LEARNING"
+}
+
+###
+
+DELETE http://localhost:8080/api/posts/64de58f5e94696170b94506d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGRiYjFiNmRlNzRhZjdhZmRiYWVmYTUiLCJpYXQiOjE2OTIyOTQ0MDZ9.ATHgrl3sO9uamIpTNOveQI7HGZzJmkVxMSixNy0Ow0U
